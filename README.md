@@ -44,6 +44,8 @@ I strongly recommand writing with VSCode.
 ## Version
 Typst>=0.9.0 is recommanded.
 
+## Friend Link
+- [Signals-and-Control Thesis](https://github.com/Lightyear-li/Signals-and-Control)
 
 ## TODO
 - Table and figure captions of both Chinese and English.
