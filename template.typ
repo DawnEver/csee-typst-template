@@ -228,7 +228,7 @@
       
       show bibliography: set text(size:font_5p,font:font_body)
       
-      // bibliography(bibliography-file, title: text(size:font_s4p,font:font_hei)[参考文献], style: "gb-7714-2015-numeric")
+      bibliography(bibliography-file, title: text(size:font_s4p,font:font_hei)[参考文献], style: "gb-7714-2015-numeric")
       // bibliography(bibliography-file, title:"参考文献", style: "gb-7714-2015-numeric")
     }
 
