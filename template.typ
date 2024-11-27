@@ -62,7 +62,7 @@
       let page_number = page_counter.at(loc).first()
       if page_number==1 [
         #align(center)[
-          #text(font:font_body,size:font_s5p,)[信#h(0.4cm)号#h(0.4cm)与#h(0.4cm)控#h(0.4cm)制#h(0.4cm)综#h(0.4cm)合#h(0.4cm)实#h(0.4cm)验\ Signal and Control Experiment]
+          #text(font:font_body,size:font_s5p,)[中#h(0.4cm)国#h(0.4cm)电#h(0.4cm)机#h(0.4cm)工#h(0.4cm)程#h(0.4cm)学#h(0.4cm)报\ Proceedings of the CSEE]
         ]
       ]else if calc.odd(page_number) [
         #v(-5pt, weak: true)      
@@ -71,7 +71,7 @@
         ]
       ]else[
         #align(center)[
-          #text(font:font_body,size:font_s5p,)[信#h(0.4cm)号#h(0.4cm)与#h(0.4cm)控#h(0.4cm)制#h(0.4cm)综#h(0.4cm)合#h(0.4cm)实#h(0.4cm)验]
+          #text(font:font_body,size:font_s5p,)[中#h(0.4cm)国#h(0.4cm)电#h(0.4cm)机#h(0.4cm)工#h(0.4cm)程#h(0.4cm)学#h(0.4cm)报]
         ]
         #v(-5pt, weak: true)      
         #page_number
@@ -82,10 +82,12 @@
       line(length: 100%,stroke: 0.5pt)
     }),
   )
-
+  // first line indent
+  
   // Configure equation numbering and spacing.
-  set math.equation(numbering: "(1)",supplement:[])
+  set math.equation(numbering: "(1)",supplement:[式])
   show math.equation: it =>{
+    h(0em,weak: false)
     set block(spacing: 0.65em)
     it
     h(0em,weak: false)
@@ -170,8 +172,8 @@
         #v(font_5p, weak: true)
       ]
     ]
-    // v(10pt, weak: true)
-    h(0em)
+    ""
+    v(-font_5p, weak: true)
   }
 
 
@@ -229,7 +231,6 @@
       show bibliography: set text(size:font_5p,font:font_body)
       
       bibliography(bibliography-file, title: text(size:font_s4p,font:font_hei)[参考文献], style: "gb-7714-2015-numeric")
-      // bibliography(bibliography-file, title:"参考文献", style: "gb-7714-2015-numeric")
     }
 
 }
