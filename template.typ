@@ -56,10 +56,8 @@
   set page(
     paper: "a4",
     margin: (left:2.0cm, right:2.0cm, top: 3.2cm, bottom: 2.5cm),
-    header: locate(loc => {
-
-      let page_counter = counter(page)
-      let page_number = page_counter.at(loc).first()
+    header: context {
+      let page_number = counter(page).get().first() 
       if page_number==1 [
         #align(center)[
           #text(font:font_body,size:font_s5p,)[中#h(0.4cm)国#h(0.4cm)电#h(0.4cm)机#h(0.4cm)工#h(0.4cm)程#h(0.4cm)学#h(0.4cm)报\ Proceedings of the CSEE]
@@ -76,11 +74,12 @@
         #v(-5pt, weak: true)      
         #page_number
       ]
+
       v(5pt, weak: true)
       line(length: 100%,stroke: 0.5pt)
       v(1.3pt, weak: true)
       line(length: 100%,stroke: 0.5pt)
-    }),
+    },
   )
   // first line indent
   
